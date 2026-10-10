@@ -11,6 +11,7 @@ Built for Problem Statement 4 — *Predicting the Unseen: Pre-Visual Food Waste 
 ## Features
 
 - **Inventory dashboard** — produce batches ranked by risk, with quantity, storage age, conditions, consumption rate and status (demo data, clearly labelled).
+- **3D inventory twin** — interactive three.js storeroom (React Three Fiber) with low-poly walk-in chiller, reach-in fridges, produce cooler and ambient rack; produce crates on pallets coloured by projected waste, safety holds, temperature sensors and FreshVision camera fields of view. Toggle baseline vs intervention scenario; click a pallet to inspect and simulate.
 - **Image inspection** — upload a produce photo; colour-distribution, discoloration and texture features are extracted locally in the browser and shown as an annotated overlay. Optional MobileNet (TensorFlow.js) identifies the produce type only.
 - **Explainable risk engine** — transparent weighted scoring of storage age, temperature and humidity deviation, demand shortfall and visual indicators, with per-factor contributions and configurable weights. The visual score is kept separate from the overall inventory-risk score.
 - **Counterfactual simulator** — compare a baseline plan with interventions (menu prioritisation, storage correction, redistribution) and see the change in projected quantity at risk.
@@ -44,7 +45,7 @@ npx vercel
 
 ## Tech
 
-React 18 · Vite 5 · TypeScript · Canvas 2D image processing · TensorFlow.js MobileNet (lazy-loaded, optional)
+React 18 · Vite 5 · TypeScript · three.js + React Three Fiber 8 + drei 9 · Canvas 2D image processing · TensorFlow.js MobileNet (lazy-loaded, optional)
 
 ## Limitations
 

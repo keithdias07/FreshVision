@@ -6,6 +6,7 @@ import {
 } from './lib/risk';
 import { RiskDistribution, ScenarioBars, ScoreRing, STATUS_COLOR } from './components/Charts';
 import { ImageInspector } from './components/ImageInspector';
+import { TwinPanel } from './components/TwinPanel';
 
 const KIND_LABEL = { safety: 'Food safety', inspect: 'Inspect', storage: 'Storage', 'use-first': 'Use first', purchasing: 'Purchasing', capture: 'Data' } as const;
 
@@ -84,6 +85,9 @@ export default function App() {
         <div className="kpi warn"><span>On safety hold</span><b>{holds}</b><small>excluded from use-first actions</small></div>
       </section>
 
+      <TwinPanel rows={rows} plan={plan} selectedId={sel.batch.id} onSelect={setSelected}
+        onSimulate={id => { setSimBatch(id); setSelected(id); document.getElementById('simulator')?.scrollIntoView({ block: 'start' }); }} />
+
       <div className="grid main">
         <section className="card span2">
           <div className="card-h"><h2>Inventory · ranked by risk</h2><span className="muted small">Click a batch to explain its score</span></div>
@@ -154,7 +158,7 @@ export default function App() {
         </section>
       </div>
 
-      <section className="card sim">
+      <section className="card sim" id="simulator">
         <div className="card-h">
           <div>
             <div className="eyebrow">Counterfactual simulator</div>
