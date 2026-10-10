@@ -1,0 +1,19 @@
+# dependencies & build output
+node_modules
+dist
+*.tsbuildinfo
+
+# environment / secrets
+.env
+.env.*
+*.pem
+*.key
+
+# tooling / local config
+.vercel
+.claude/
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+*.local
