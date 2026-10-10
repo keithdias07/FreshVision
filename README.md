@@ -4,6 +4,10 @@
 
 > *Don't detect waste. Prevent it before it happens.*
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/keithdias07/FreshVision/blob/main/notebooks/FreshVision_Prototype_Explained.ipynb) — notebook walkthrough of the risk engine, image heuristics and simulator
+
+**Live:** https://freshvision-nine.vercel.app/ · **Demo video:** https://youtu.be/4cgehACaUok
+
 FreshVision is a computer vision and inventory intelligence platform that identifies potentially at-risk food batches and helps users simulate waste-prevention strategies.
 
 Built for Problem Statement 4 — *Predicting the Unseen: Pre-Visual Food Waste Mitigation*.
